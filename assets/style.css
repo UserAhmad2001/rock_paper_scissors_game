@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Barlow Semi Condensed';
+    src: url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+}
+*{
+    --dark-txt:hsl(229, 25%, 31%);
+    --score-txt:hsl(229, 64%, 46%);
+    --header-outline:hsl(217, 16%, 45%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body,html{
+    background: radial-gradient(ellipse at top , hsl(214, 47%, 23%), hsl(237, 49%, 15%) );
+    height: 100%;
+}
+.attribution{
+    position: absolute;
+    top: 97%;
+    color: white;
+}
+
+/* THIS IS THE RULES WINDOW */
+#rules-container{
+    display: none;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: .5rem;
+    padding: 3rem;
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: 1000;
+}
+
+#rules-container h1{
+    display: inline;
+    flex-basis: 90%;
+}
+#rules-container #close-btn{
+    margin-left: auto;
+    object-fit: contain;
+    flex-basis: 10%;
+    cursor: pointer;
+}
+#rules-container #rules-img{
+    grid-column: 1 / 3;
+    padding-top: 2rem;
+    margin: auto;
+    width: 100%;
+}
+/* THIS IS THE RULES WINDOW */
+
+
+
+
+
+/* THIS IS THE RULES BUTTON */
+#rules-btn{
+    color: white;
+    position: fixed;
+    top: 90%;
+    left: 89%;
+    border:2px solid white ;
+    border-radius: .5rem;
+    padding: .5rem 2.5rem;
+    cursor: pointer;
+
+}
+/* THIS IS THE RULES BUTTON */
+
+
+
+
+
+
+/* THE SCORE SECTION */
+.scores{
+    display: flex;
+    width: 80%;
+    max-width: 40rem;
+    border: 2px solid var(--header-outline);
+    color: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-inline: auto;
+}
+
+.scores h1{
+    font-weight: 700;
+    flex-basis: 80%;
+    line-height: 1.7rem;
+    font-size: 2rem;
+}
+.scores div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: var(--dark-txt);
+    margin-left: auto;
+    flex-basis: 20%;
+    width: 100%;
+    border-radius: .3rem;
+    min-width: 5rem;
+}
+
+.scores div span:first-child{
+    color: var(--score-txt);
+    font-weight: 700;
+    font-size: .8rem;
+}
+.scores div span:last-child{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: .3rem;
+
+}
+
+/* THE SCORE SECTION */
+
+
+
+
+
+
+/* THE GAME CHOICES */
+
+
+
+
+
+/* THE GAME CHOICES */
