@@ -1,3 +1,9 @@
+const choices = [
+    './images\icon-rock.svg',
+    './images\icon-paper.svg',
+    './images\icon-scissors.svg'
+]
+
 document.querySelector('#rules-btn')
 .addEventListener('click', rulesWindow)
 document.querySelector('#close-btn')
@@ -16,3 +22,6 @@ function rulesWindow(e){
         }, 100);
     }
 }
+
+
+

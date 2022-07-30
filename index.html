@@ -9,22 +9,13 @@
 
 </head>
 <body>
-  <!-- THE RULES SECTION -->
-  <section>
-    <span id="rules-btn">RULES</span>
-    <div id="rules-container">
-        <h1>RULES</h1>
-        <img id="close-btn" src="./images/icon-close.svg" alt="rules close button">
-        <img id="rules-img" src="./images/image-rules.svg" alt="rules image">
-    </div>
-  </section>
   
-
+  
 <!-- THE SCORE SECTION -->
 <section class="scores">
   <h1>ROCK <br>PAPER <br>SCISSORS</h1>
   <div>
-    <span>SCORE</span> <span>11</span>
+    <span>SCORE</span> <span class="score">11</span>
   </div>
 </section>
 
@@ -34,22 +25,66 @@
 
 
 <!-- THE BUTTONS SECTION -->
-<section class="rps-container">
+<section class="rps-choose">
+  <div class="rps-cont" tabindex="0">
+    <img src="./images/icon-rock.svg" alt="rock">
+  </div>
+  <div class="rps-cont" tabindex="1">
+    <img src="./images/icon-paper.svg" alt="paper">
+  </div>
+  <div class="rps-cont" tabindex="2">
+    <img src="./images/icon-scissors.svg" alt="scissors">
+  </div>
   <img src="./images/bg-triangle.svg" alt="triangle">
-  <img src="./images/icon-rock.svg" alt="rock">
-  <img src="./images/icon-paper.svg" alt="paper">
-  <img src="./images/icon-scissors.svg" alt="scissors">
 </section>
-
-
-
-
 
 <!-- THE BUTTONS SECTION -->
 
 
 
 
+<!-- THE MATCH RESULTS -->
+<section class="rps-results">
+  <div>
+    <h1>YOU PICKED</h1>
+    <span class="my-choice">
+      <img class="circle" src="./images/icon-scissors.svg" alt="scissors">
+    </span>
+  </div>
+
+  
+  <div>
+    <h1 class="result">YOU WIN</h1>
+    <button>PLAY AGAIN</button>
+  </div>
+  
+  <div>
+    <h1>THE HOUSE PICKED</h1>
+    <span class="house-choice">
+      <img src="./images/icon-rock.svg" alt="scissors">
+    </span>
+  </div>
+</section>
+
+
+
+<!-- THE MATCH RESULTS -->
+
+
+
+
+
+
+<!-- THE RULES SECTION -->
+<section>
+  <span id="rules-btn">RULES</span>
+  <div id="rules-container">
+    <h1>RULES</h1>
+    <img id="close-btn" src="./images/icon-close.svg" alt="rules close button">
+    <img id="rules-img" src="./images/image-rules.svg" alt="rules image">
+  </div>
+</section>
+<!-- THE RULES SECTION -->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
