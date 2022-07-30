@@ -1,0 +1,25 @@
+.rps-choice{
+    width: 20%;
+    margin-top: 9rem;
+    position: relative;
+
+    .rps:nth-child(1){
+        left: 0;
+        top: 0;
+    }
+    .rps:nth-child(2){
+        left: 100%;
+        top: 0;
+    }
+    .rps:nth-child(3){
+        left: 50%;
+        top: 100%;
+    }
+    
+    .triangle{
+        width: 100%;
+
+    }
+
+
+}

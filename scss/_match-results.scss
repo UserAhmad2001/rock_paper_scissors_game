@@ -1,0 +1,48 @@
+.rps-results{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 6rem;
+
+
+    .res-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:not(.result-txt-btn){
+            margin-inline: 4rem;
+        }
+
+        h1{
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+
+
+        .my-choice,.house-choice{
+            background-color: rgba(0, 0, 0, 0.518);
+            border-radius: 50%;
+            margin-top: 3rem;
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+
+    .result-txt-btn{
+        display: none;
+        .result{
+            font-size: 3.4rem;
+        }
+
+        button{
+            border-radius: .5rem;
+            padding: 1rem 4rem;
+            background-color: white;
+            color: purple;
+            margin-top: .5rem;
+            cursor: pointer;
+            border: none;
+        }
+    }
+
+}

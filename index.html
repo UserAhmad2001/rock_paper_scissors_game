@@ -10,34 +10,31 @@
 </head>
 <body>
   
-  
 <!-- THE SCORE SECTION -->
 <section class="scores">
   <h1>ROCK <br>PAPER <br>SCISSORS</h1>
   <div>
-    <span>SCORE</span> <span class="score">11</span>
+    <span>SCORE</span> <span class="score">0</span>
   </div>
 </section>
-
 <!-- THE SCORE SECTION -->
 
 
 
 
 <!-- THE BUTTONS SECTION -->
-<section class="rps-choose">
-  <div class="rps-cont" tabindex="0">
-    <img src="./images/icon-rock.svg" alt="rock">
-  </div>
-  <div class="rps-cont" tabindex="1">
-    <img src="./images/icon-paper.svg" alt="paper">
-  </div>
-  <div class="rps-cont" tabindex="2">
-    <img src="./images/icon-scissors.svg" alt="scissors">
-  </div>
-  <img src="./images/bg-triangle.svg" alt="triangle">
+<section class="rps-choice">
+    <div class="rps">
+      <img class="rps-img" src="./images/icon-rock.svg" alt="rock">
+    </div>
+    <div class="rps">
+      <img class="rps-img" src="./images/icon-paper.svg" alt="paper">
+    </div>
+    <div class="rps">
+      <img class="rps-img" src="./images/icon-scissors.svg" alt="scissors">
+    </div>
+    <img class="triangle" src="./images/bg-triangle.svg" alt="triangle">
 </section>
-
 <!-- THE BUTTONS SECTION -->
 
 
@@ -45,29 +42,29 @@
 
 <!-- THE MATCH RESULTS -->
 <section class="rps-results">
-  <div>
+  <div class="res-container">
     <h1>YOU PICKED</h1>
     <span class="my-choice">
-      <img class="circle" src="./images/icon-scissors.svg" alt="scissors">
+      <div class="rps2">
+        <img class="circle" src="./images/icon-scissors.svg" alt="scissors">
+      </div>
     </span>
   </div>
-
   
-  <div>
+  <div class="res-container result-txt-btn">
     <h1 class="result">YOU WIN</h1>
     <button>PLAY AGAIN</button>
   </div>
   
-  <div>
+  <div class="res-container">
     <h1>THE HOUSE PICKED</h1>
     <span class="house-choice">
-      <img src="./images/icon-rock.svg" alt="scissors">
+      <div class="rps2">
+        <img src="./images/icon-rock.svg" alt="scissors">
+      </div>
     </span>
   </div>
 </section>
-
-
-
 <!-- THE MATCH RESULTS -->
 
 

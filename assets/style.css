@@ -10,11 +10,76 @@
   font-family: "Barlow Semi Condensed", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-body {
+body, html {
   background: radial-gradient(circle at top, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
   width: 100%;
   height: 100%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rps-choice {
+  width: 20%;
+  margin-top: 9rem;
+  position: relative;
+}
+.rps-choice .rps:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.rps-choice .rps:nth-child(2) {
+  left: 100%;
+  top: 0;
+}
+.rps-choice .rps:nth-child(3) {
+  left: 50%;
+  top: 100%;
+}
+.rps-choice .triangle {
+  width: 100%;
+}
+
+.rps-results {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6rem;
+}
+.rps-results .res-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rps-results .res-container:not(.result-txt-btn) {
+  margin-inline: 4rem;
+}
+.rps-results .res-container h1 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.rps-results .res-container .my-choice, .rps-results .res-container .house-choice {
+  background-color: rgba(0, 0, 0, 0.518);
+  border-radius: 50%;
+  margin-top: 3rem;
+  width: 14rem;
+  height: 14rem;
+}
+.rps-results .result-txt-btn {
+  display: none;
+}
+.rps-results .result-txt-btn .result {
+  font-size: 3.4rem;
+}
+.rps-results .result-txt-btn button {
+  border-radius: 0.5rem;
+  padding: 1rem 4rem;
+  background-color: white;
+  color: purple;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border: none;
 }
 
 .rules #rules-btn {
@@ -29,6 +94,8 @@ body {
   cursor: pointer;
 }
 .rules #rules-container {
+  z-index: 1000;
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -36,8 +103,8 @@ body {
   background-color: white;
   padding: 2rem;
   border-radius: 1rem;
-  display: flex;
   flex-wrap: wrap;
+  box-shadow: 0 0 10px black;
 }
 .rules #rules-container h1 {
   flex-basis: 95%;
@@ -54,6 +121,107 @@ body {
   flex-basis: 90%;
   margin-inline: auto;
   padding-top: 2rem;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid hsl(217deg, 16%, 45%);
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 0.7rem;
+}
+.scores h1 {
+  flex-basis: 70%;
+  font-size: 2rem;
+  line-height: 1.9rem;
+}
+.scores div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  border-radius: 0.5rem;
+  align-items: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding-block: 1rem;
+  max-width: 9rem;
+  margin-left: auto;
+}
+.scores div span {
+  color: hsl(229deg, 64%, 46%);
+}
+.scores div .score {
+  color: rgba(0, 0, 0, 0.665);
+  font-size: 3rem;
+  font-family: monospace;
+}
+
+.rps {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at bottom, #DF4F4F 85%, #B02F2D 85%);
+  cursor: pointer;
+  width: 80%;
+  height: 90%;
+  max-width: 12rem;
+  max-height: 12rem;
+  min-width: 9rem;
+  min-height: 9rem;
+}
+.rps img {
+  width: 4rem;
+}
+.rps::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at 50% 0%, #E6E6E6 82%, #BBBED7 82%);
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.rps2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  min-width: 9rem;
+  min-height: 9rem;
+  z-index: 2;
+}
+.rps2 img {
+  width: 4rem;
+}
+.rps2::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .attribution {

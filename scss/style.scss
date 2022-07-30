@@ -5,7 +5,7 @@
 @use './rules';
 @use './scores';
 @use './media-queries';
-
+@use './custom';
 .attribution{
     display: none;
 }
