@@ -12,6 +12,11 @@ var res_txt = document.querySelector('.result')
 var score = document.querySelector('.score')
 var mChoice = document.querySelector('.my-choice')
 var hChoice = document.querySelector('.house-choice')
+var stored_score = localStorage.getItem('score')
+if(stored_score !== '' && stored_score !== null){
+    console.log(localStorage.getItem('score'));
+    score.innerHTML = stored_score
+}
 
 // THIS IS THE RULES WINDOW LOGIC
 document.querySelector('#rules-btn')
@@ -52,9 +57,8 @@ setTimeout(() => {
     house_picked.children[0].src = rand
     result_sec.style.display = 'flex'
     changeScore(rand, player_choice)
-}, 3000);
+}, 1000);
 }
-
 function play_again(e){
     result_sec.style.display = 'none'
     rps_results.style.display = 'none'
@@ -62,7 +66,6 @@ function play_again(e){
     house_picked.style.display = 'none'
     document.querySelector('.focused').remove()
 }
-
 function changeScore(rand , player_ch){
 
     if(player_ch.includes('rock') && rand === choices[0]){
@@ -116,6 +119,8 @@ function changeScore(rand , player_ch){
         score.innerHTML = current_score
         focusOnWinner(true)
     }
+
+    localStorage.setItem('score', score.innerHTML)
 }
 function focusOnWinner(player){
     var el = document.createElement('span')
