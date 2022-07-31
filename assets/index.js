@@ -17,8 +17,8 @@ if(stored_score !== '' && stored_score !== null){
     console.log(localStorage.getItem('score'));
     score.innerHTML = stored_score
 }
-var win = new Audio('./win.wav')
-var lose = new Audio('./lose.wav')
+var win = document.querySelector('.win')
+var lose = document.querySelector('.lose')
 
 // THIS IS THE RULES WINDOW LOGIC
 document.querySelector('#rules-btn')
