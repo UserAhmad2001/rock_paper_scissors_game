@@ -66,6 +66,9 @@ body, html {
   width: 14rem;
   height: 14rem;
 }
+.rps-results .res-container .my-choice .house-choice-img, .rps-results .res-container .house-choice .house-choice-img {
+  display: none;
+}
 .rps-results .result-txt-btn {
   display: none;
 }
@@ -224,6 +227,49 @@ body, html {
   z-index: -1;
 }
 
+.my-choice, .house-choice {
+  position: relative;
+}
+.my-choice .focused, .house-choice .focused {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.my-choice .focused::before, .house-choice .focused::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: winner-anim 2s 1s linear infinite;
+  border-radius: 50%;
+  background-color: white;
+}
+.my-choice .focused::after, .house-choice .focused::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: winner-anim 2s 0 linear infinite;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@keyframes winner-anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1000);
+  }
+}
 .attribution {
   display: none;
 }
