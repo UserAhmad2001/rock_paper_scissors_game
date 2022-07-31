@@ -3,14 +3,15 @@
 
     #rules-btn{
         position: absolute;
-        left: 93%;
-        top: 93%;
+        left: 90%;
+        top: 90%;
         transform: translate(-50%, -50%);
         padding: .5rem 2.4rem;
         border: 2px solid $header-txt;
         border-radius: .5rem;
         font-weight: 100;
         cursor: pointer;
+        z-index: 100;
     }
 
 

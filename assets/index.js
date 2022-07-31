@@ -17,6 +17,8 @@ if(stored_score !== '' && stored_score !== null){
     console.log(localStorage.getItem('score'));
     score.innerHTML = stored_score
 }
+var win = new Audio('./win.wav')
+var lose = new Audio('./lose.wav')
 
 // THIS IS THE RULES WINDOW LOGIC
 document.querySelector('#rules-btn')
@@ -79,6 +81,7 @@ function changeScore(rand , player_ch){
     }
     else if(player_ch.includes('rock') && rand === choices[1]){
         res_txt.innerHTML = "YOU LOST"
+        lose.play()
         var current_score = Number.parseInt(score.innerHTML)
         current_score--
         score.innerHTML = current_score
@@ -86,6 +89,7 @@ function changeScore(rand , player_ch){
     }
     else if(player_ch.includes('rock') && rand === choices[2]){
         res_txt.innerHTML = "YOU WON"
+        win.play()
         var current_score = Number.parseInt(score.innerHTML)
         current_score++
         score.innerHTML = current_score
@@ -93,6 +97,7 @@ function changeScore(rand , player_ch){
     }
     else if(player_ch.includes('paper') && rand === choices[0]){
         res_txt.innerHTML = "YOU WON"
+        win.play()
         var current_score = Number.parseInt(score.innerHTML)
         current_score++
         score.innerHTML = current_score
@@ -100,6 +105,7 @@ function changeScore(rand , player_ch){
     }
     else if(player_ch.includes('paper') && rand === choices[2]){
         res_txt.innerHTML = "YOU LOST"
+        lose.play()
         var current_score = Number.parseInt(score.innerHTML)
         current_score--
         score.innerHTML = current_score
@@ -107,6 +113,7 @@ function changeScore(rand , player_ch){
     }
     else if(player_ch.includes('scissors') && rand === choices[0]){
         res_txt.innerHTML = "YOU LOST"
+        lose.play()
         var current_score = Number.parseInt(score.innerHTML)
         current_score--
         score.innerHTML = current_score
@@ -114,6 +121,7 @@ function changeScore(rand , player_ch){
     }
     else if(player_ch.includes('scissors') && rand === choices[1]){
         res_txt.innerHTML = "YOU WON"
+        win.play()
         var current_score = Number.parseInt(score.innerHTML)
         current_score++
         score.innerHTML = current_score
