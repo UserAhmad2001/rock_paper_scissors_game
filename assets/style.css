@@ -291,9 +291,6 @@ body, html {
   }
 }
 @media screen and (max-width: 661px) {
-  body {
-    overflow: auto;
-  }
   .rules #rules-btn {
     display: block;
     position: static !important;
@@ -312,10 +309,10 @@ body, html {
   .rules #rules-container h1 {
     flex-basis: 10%;
     color: black;
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .rules #rules-container #close-btn {
-    flex-basis: 10%;
+    flex-basis: 15%;
     order: 2;
     margin-top: auto;
     width: 3rem;
@@ -324,6 +321,32 @@ body, html {
   .rules #rules-container #rules-img {
     flex-basis: 10%;
     width: 95%;
+  }
+}
+@media (max-width: 752px) {
+  .rps-results {
+    flex-wrap: wrap;
+  }
+  .rps-results .res-container:not(.result-txt-btn) {
+    flex-direction: column-reverse;
+    margin: 0;
+    flex-basis: 50%;
+  }
+  .rps-results .res-container .my-choice, .rps-results .res-container .house-choice {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 10rem;
+    height: 10rem;
+    margin-inline: 1rem;
+  }
+  .rps-results .res-container .my-choice .house-choice-img, .rps-results .res-container .house-choice .house-choice-img {
+    display: none;
+  }
+  .rps-results .result-txt-btn {
+    z-index: 1;
+    order: 2;
+    margin: auto;
+    margin-top: 4rem;
   }
 }
 .attribution {

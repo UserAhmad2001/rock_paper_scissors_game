@@ -13,9 +13,7 @@
 
 
 @media screen and (max-width:661px){
-    body{
-        overflow: auto;
-    }
+
         .rules{
         #rules-btn{
             display: block;
@@ -39,11 +37,11 @@
             h1{
                 flex-basis: 10%;
                 color: black;
-                font-size: 2rem;
+                font-size: 4rem;
             }
     
             #close-btn{
-                flex-basis: 10% ;
+                flex-basis: 15% ;
                 order: 2;
                 margin-top: auto;
                 width: 3rem;
@@ -61,3 +59,42 @@
     }
 
 }
+
+
+@media (max-width:752px){
+    .rps-results{
+        flex-wrap: wrap;
+    
+    
+        .res-container{
+            
+            &:not(.result-txt-btn){
+                flex-direction: column-reverse;
+                margin: 0;
+                flex-basis: 50%;
+            }
+
+    
+            .my-choice,.house-choice{
+                margin-top: 0;
+                margin-bottom: 1rem;
+                width: 10rem;
+                height: 10rem;
+                margin-inline: 1rem;
+    
+                .house-choice-img{
+                    display: none;
+                }
+            }
+    
+        }
+    
+        .result-txt-btn{
+            z-index: 1;
+            order: 2;
+            margin: auto;
+            margin-top: 4rem;
+            }
+    
+    }
+    }
