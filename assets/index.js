@@ -69,6 +69,7 @@ function play_again(e){
     document.querySelector('.focused').remove()
 }
 function changeScore(rand , player_ch){
+    console.log(rand, player_ch);
 
     if(player_ch.includes('rock') && rand === choices[0]){
         res_txt.innerHTML = "IT'S A DRAW"
