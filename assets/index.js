@@ -139,7 +139,7 @@ function focusOnWinner(player){
 function timer_function(){
     var house_picked = document.querySelector('.house-choice-img')
     house_picked.style.display = 'flex'
-    var rand = choices[Math.floor(Math.random() * 2)]
+    var rand = choices[Math.round(Math.random() * 2)]
     house_picked.children[0].src = rand
     result_sec.style.display = 'flex'
     changeScore(rand, player_choice)

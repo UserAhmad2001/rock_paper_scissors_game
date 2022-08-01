@@ -30,14 +30,17 @@ body, html {
 .rps-choice .rps:nth-child(1) {
   left: 0;
   top: 0;
+  background: radial-gradient(circle at top, #df4f4f 85%, #b02f2d 85%);
 }
 .rps-choice .rps:nth-child(2) {
   left: 100%;
   top: 0;
+  background: radial-gradient(circle at top, #4665f6 85%, #2a46c2 85%);
 }
 .rps-choice .rps:nth-child(3) {
   left: 50%;
   top: 100%;
+  background: radial-gradient(circle at top, #eb9f0e 85%, #c96b19 85%);
 }
 .rps-choice .triangle {
   width: 100%;
@@ -176,7 +179,6 @@ body, html {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: radial-gradient(circle at bottom, #DF4F4F 85%, #B02F2D 85%);
   cursor: pointer;
   width: 80%;
   height: 90%;
@@ -191,7 +193,7 @@ body, html {
 .rps::before {
   content: "";
   position: absolute;
-  background: radial-gradient(circle at 50% 0%, #E6E6E6 82%, #BBBED7 82%);
+  background: radial-gradient(circle at bottom, #e6e6e6 85%, #bbbed7 85%);
   width: 80%;
   height: 80%;
   top: 50%;

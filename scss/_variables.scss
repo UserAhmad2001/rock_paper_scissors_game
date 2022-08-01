@@ -1,19 +1,11 @@
-$white-gradient:radial-gradient(
-circle at 50% 0%,
-#E6E6E6 82%, 
-#BBBED7 82%);
+$white-gradient: 
+radial-gradient(circle at bottom, #e6e6e6 85%, #bbbed7 85%);
 
-$red-gradient:radial-gradient(
-circle at bottom,
-#DF4F4F 85%, 
-#B02F2D 85%);
+$red-gradient: 
+radial-gradient(circle at top, #df4f4f 85%, #b02f2d 85%);
 
-$green-gradient:radial-gradient(
-circle at top,
-#4665F6 85%, 
-#2A46C2 85%);
+$blue-gradient: 
+radial-gradient(circle at top, #4665f6 85%, #2a46c2 85%);
 
-$yellow-gradient:radial-gradient(
-circle at top,
-#EB9F0E 85%, 
-#C96B19 85%);
+$yellow-gradient: 
+radial-gradient(circle at top, #eb9f0e 85%, #c96b19 85%);
