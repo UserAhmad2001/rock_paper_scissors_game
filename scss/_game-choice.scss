@@ -1,4 +1,4 @@
-@use './variables' as *;
+
 .rps-choice{
     width: 40%;
     max-width: 17rem;
@@ -8,17 +8,25 @@
     .rps:nth-child(1){
         left: 0;
         top: 0;
-        background: $red-gradient;
+        
+        box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+        , 0 0.5rem 0 0px #b02f2d;
+        border-color: #df4f4f ;
+
     }
     .rps:nth-child(2){
         left: 100%;
         top: 0;
-        background: $blue-gradient;
+        box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+        , 0 0.5rem 0 0px #2a46c2;
+        border-color: #4665f6 ;
     }
     .rps:nth-child(3){
         left: 50%;
         top: 100%;
-        background: $yellow-gradient;
+        box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+        , 0 0.5rem 0 0px #c96b19;
+        border-color: #eb9f0e ;
     }
     
     .triangle{

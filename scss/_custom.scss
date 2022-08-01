@@ -1,4 +1,3 @@
-@use './variables' as *;
 
 .rps{
     position: absolute;
@@ -8,8 +7,15 @@
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    width: 80%;
-    height: 90%;
+    background:white ;
+    box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+                    , 0 0.5rem 0 0px rgb(162 21 47);
+    border: 1.6rem solid #dc3550;
+
+    user-select: none;
+
+    width: 70%;
+    height: 80%;
     max-width: 12rem;
     max-height: 12rem;
     min-width: 7rem;
@@ -18,21 +24,7 @@
         width: 4rem;
     }
 
-
-    &::before{
-        content: '';
-        position: absolute;
-        background: $white-gradient;
-        width: 80%;
-        height: 80%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        border-radius: 50%;
-    }
 }
-
 
 .rps2{
     display: flex;
@@ -40,7 +32,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: red;
+    background: white;
+    border: 1.6rem solid #dc3550;
     cursor: pointer;
     width: 100%;
     height: 100%;
@@ -51,22 +44,23 @@
         width: 4rem;
     }
 
-
-    &::before{
-        content: '';
-        position: absolute;
-        background-color: white;
-        width: 80%;
-        height: 80%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        z-index: -1;
-    }
 }
 
-
+.results-rock{
+    box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+        , 0 0.5rem 0 0px #b02f2d;
+        border-color: #df4f4f ;
+}
+.results-paper{
+    box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+        , 0 0.5rem 0 0px #2a46c2;
+        border-color: #4665f6 ;
+}
+.results-scissors{
+    box-shadow: inset 0 0.3rem 0 2px rgb(64 64 64 / 25%)
+    , 0 0.5rem 0 0px #c96b19;
+    border-color: #eb9f0e ;
+}
 
 
 .my-choice,.house-choice{
@@ -82,7 +76,7 @@
         background: white;
         opacity: .07;
         transform: scale(1.5);
-
+        
         &::before{
             content: '';
             position: absolute;
@@ -110,6 +104,14 @@
         }
     }
 }
+
+
+
+
+
+
+
+
 
 
 @keyframes winner-anim {

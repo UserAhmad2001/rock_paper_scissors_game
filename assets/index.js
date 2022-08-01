@@ -51,7 +51,7 @@ player_choice = e.currentTarget.children[0].src
 player_picked.children[0].src = player_choice
 rps_choice.style.display = 'none'
 rps_results.style.display = 'flex'
-
+setPlayerPickedStyling(player_choice)
 setTimeout(timer_function, 1000);
 }
 function play_again(e){
@@ -62,7 +62,6 @@ function play_again(e){
     document.querySelector('.focused').remove();
 }
 function changeScore(rand , player_ch){
-    console.log(rand, player_ch);
 
     if(player_ch.includes('/images/icon-rock.svg') && rand === choices[0]){
         res_txt.innerHTML = "IT'S A DRAW"
@@ -143,6 +142,36 @@ function timer_function(){
     house_picked.children[0].src = rand
     result_sec.style.display = 'flex'
     changeScore(rand, player_choice)
+    setHousePickedStyling(rand)
+}
+function setHousePickedStyling(hp){
+    var house_p = document.getElementById('hp')
+    if(hp.includes('rock')){
+        console.log('rock');
+        house_p.classList += ' results-rock'
+    }
+    else if(hp.includes('paper')){
+        console.log('paper');
+        house_p.classList += ' results-paper'
+    }
+    else if(hp.includes('scissors')){
+        console.log('scissors');
+        house_p.classList += ' results-scissors'
+    }
+
+}
+function setPlayerPickedStyling(pp){
+    var house_p = document.getElementById('pp')
+    if(pp.includes('rock')){
+        house_p.classList += ' results-rock'
+    }
+    else if(pp.includes('paper')){
+        house_p.classList += ' results-paper'
+    }
+    else if(pp.includes('scissors')){
+        house_p.classList += ' results-scissors'
+    }
+
 }
 
 // THIS IS THE GAME LOGIC

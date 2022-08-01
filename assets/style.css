@@ -30,17 +30,20 @@ body, html {
 .rps-choice .rps:nth-child(1) {
   left: 0;
   top: 0;
-  background: radial-gradient(circle at top, #df4f4f 85%, #b02f2d 85%);
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px #b02f2d;
+  border-color: #df4f4f;
 }
 .rps-choice .rps:nth-child(2) {
   left: 100%;
   top: 0;
-  background: radial-gradient(circle at top, #4665f6 85%, #2a46c2 85%);
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px #2a46c2;
+  border-color: #4665f6;
 }
 .rps-choice .rps:nth-child(3) {
   left: 50%;
   top: 100%;
-  background: radial-gradient(circle at top, #eb9f0e 85%, #c96b19 85%);
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px #c96b19;
+  border-color: #eb9f0e;
 }
 .rps-choice .triangle {
   width: 100%;
@@ -180,8 +183,12 @@ body, html {
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  width: 80%;
-  height: 90%;
+  background: white;
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px rgb(162, 21, 47);
+  border: 1.6rem solid #dc3550;
+  user-select: none;
+  width: 70%;
+  height: 80%;
   max-width: 12rem;
   max-height: 12rem;
   min-width: 7rem;
@@ -190,18 +197,6 @@ body, html {
 .rps img {
   width: 4rem;
 }
-.rps::before {
-  content: "";
-  position: absolute;
-  background: radial-gradient(circle at bottom, #e6e6e6 85%, #bbbed7 85%);
-  width: 80%;
-  height: 80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  border-radius: 50%;
-}
 
 .rps2 {
   display: flex;
@@ -209,7 +204,8 @@ body, html {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: red;
+  background: white;
+  border: 1.6rem solid #dc3550;
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -220,17 +216,20 @@ body, html {
 .rps2 img {
   width: 4rem;
 }
-.rps2::before {
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 80%;
-  height: 80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
+
+.results-rock {
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px #b02f2d;
+  border-color: #df4f4f;
+}
+
+.results-paper {
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px #2a46c2;
+  border-color: #4665f6;
+}
+
+.results-scissors {
+  box-shadow: inset 0 0.3rem 0 2px rgba(64, 64, 64, 0.25), 0 0.5rem 0 0px #c96b19;
+  border-color: #eb9f0e;
 }
 
 .my-choice, .house-choice {
@@ -325,7 +324,7 @@ body, html {
     width: 95%;
   }
 }
-@media (max-width: 752px) {
+@media (max-width: 932px) {
   .rps-results {
     flex-wrap: wrap;
   }
