@@ -64,16 +64,16 @@ function play_again(e){
 function changeScore(rand , player_ch){
     console.log(rand, player_ch);
 
-    if(player_ch.includes('rock') && rand === choices[0]){
+    if(player_ch.includes('/images/icon-rock.svg') && rand === choices[0]){
         res_txt.innerHTML = "IT'S A DRAW"
     }
-    else if(player_ch.includes('paper') && rand === choices[1]){
+    else if(player_ch.includes('/images/icon-paper.svg') && rand === choices[1]){
         res_txt.innerHTML = "IT'S A DRAW"
     }
-    else if(player_ch.includes('scissors') && rand === choices[2]){
+    else if(player_ch.includes('/images/icon-scissors.svg') && rand === choices[2]){
         res_txt.innerHTML = "IT'S A DRAW"
     }
-    else if(player_ch.includes('rock') && rand === choices[1]){
+    else if(player_ch.includes('/images/icon-rock.svg') && rand === choices[1]){
         res_txt.innerHTML = "YOU LOST"
         lose.play()
         var current_score = Number.parseInt(score.innerHTML)
@@ -81,7 +81,7 @@ function changeScore(rand , player_ch){
         score.innerHTML = current_score
         focusOnWinner(false)
     }
-    else if(player_ch.includes('rock') && rand === choices[2]){
+    else if(player_ch.includes('/images/icon-rock.svg') && rand === choices[2]){
         res_txt.innerHTML = "YOU WON"
         win.play()
         var current_score = Number.parseInt(score.innerHTML)
@@ -89,7 +89,7 @@ function changeScore(rand , player_ch){
         score.innerHTML = current_score
         focusOnWinner(true)
     }
-    else if(player_ch.includes('paper') && rand === choices[0]){
+    else if(player_ch.includes('/images/icon-paper.svg') && rand === choices[0]){
         res_txt.innerHTML = "YOU WON"
         win.play()
         var current_score = Number.parseInt(score.innerHTML)
@@ -97,7 +97,7 @@ function changeScore(rand , player_ch){
         score.innerHTML = current_score
         focusOnWinner(true)
     }
-    else if(player_ch.includes('paper') && rand === choices[2]){
+    else if(player_ch.includes('/images/icon-paper.svg') && rand === choices[2]){
         res_txt.innerHTML = "YOU LOST"
         lose.play()
         var current_score = Number.parseInt(score.innerHTML)
@@ -105,7 +105,7 @@ function changeScore(rand , player_ch){
         score.innerHTML = current_score
         focusOnWinner(false)
     }
-    else if(player_ch.includes('scissors') && rand === choices[0]){
+    else if(player_ch.includes('/images/icon-scissors.svg') && rand === choices[0]){
         res_txt.innerHTML = "YOU LOST"
         lose.play()
         var current_score = Number.parseInt(score.innerHTML)
@@ -113,7 +113,7 @@ function changeScore(rand , player_ch){
         score.innerHTML = current_score
         focusOnWinner(false)
     }
-    else if(player_ch.includes('scissors') && rand === choices[1]){
+    else if(player_ch.includes('/images/icon-scissors.svg') && rand === choices[1]){
         res_txt.innerHTML = "YOU WON"
         win.play()
         var current_score = Number.parseInt(score.innerHTML)
